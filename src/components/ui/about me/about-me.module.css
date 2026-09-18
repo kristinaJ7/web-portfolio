@@ -1,0 +1,79 @@
+.aboutMe {
+  padding: 80px 20px;
+  border-radius: 40px;
+  height: 600px;
+
+  position: relative;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+  background: rgb(69 68 68 / 45%);
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 86px;
+}
+
+.description {
+  color: #ffffff;
+  font-size: 18px;
+  max-width: 700px;
+  margin-bottom: 48px;
+}
+
+.stats {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 48px;
+  font-weight: 900;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statValue {
+  display: block;
+  font-family: 'CooperBlack', sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: -0.015em;
+  color: #fff;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.buttonlink {
+  border-radius: 50px;
+  color: #807874;
+  padding: 16px 32px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: #fff;
+}
+
+.cta:hover {
+  background-color: #a04000;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(160, 64, 0, 0.4);
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}

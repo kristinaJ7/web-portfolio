@@ -1,0 +1,38 @@
+.footer {
+  position: relative;
+  background-color: #2d2a2a;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  place-items: center;
+}
+
+.title {
+  color: transparent; /* текст полностью прозрачный */
+  -webkit-text-stroke: 1px #ffffff; /* белая обводка 2px (работает в Chrome, Safari, Edge) */
+  text-stroke: 1px #ffffff; /* запасной вариант (для браузеров, которые поддерживают нативно) */
+  font-weight: 700; /* жирнее — обводка смотрится эффектнее */
+  letter-spacing: 1px; /* чуть разнесённые буквы — стиль современнее */
+  font-size: 56px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contactsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.githubBtn {
+  border-radius: 50px;
+  padding: 10px 20px 10px 20px;
+  color: #ffffff;
+  border: 1px solid #a9a2a2;
+  background-color: #3f3737;
+}
+
+.githubBtn:hover {
+  background-color: #3f3737;
+
+  padding: 10px 20px 10px 20px;
+}

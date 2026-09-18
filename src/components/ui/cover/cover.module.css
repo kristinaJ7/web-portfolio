@@ -1,0 +1,106 @@
+.coverSection {
+  border-radius: 50px;
+  box-shadow:
+    1px 1px 19px 8px rgb(105 105 105),
+    2px 8px 11px 3px rgba(255, 255, 255, 0.1);
+  position: relative; /* обязательно для псевдоэлементов */
+  overflow: hidden; /* чтобы полушары не вылезали за скругления */
+  z-index: 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  background: radial-gradient(circle at 50% 0%, #0a0a0a 0%, #120c0c 100%);
+}
+
+/* Левый полушар */
+.coverSection::before {
+  content: '';
+  position: absolute;
+  left: -190px;
+  width: 450px;
+  height: 450px;
+  border-radius: 100%;
+  background: linear-gradient(269deg, #ff4b5c73 50%, #3e3939 50%);
+  opacity: 0.9;
+  z-index: 0;
+  filter: blur(50px);
+}
+
+.subtitle {
+  font-size: 28px;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.coverTitle {
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+/* Яркие акценты */
+.brightSpot {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff4b5c, #ff8e5c);
+  filter: blur(40px);
+  opacity: 0.8;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Размытые фоновые пятна */
+.decorCircle {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.6;
+  top: -50px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.decorCircle:first-child {
+  background: rgba(255, 75, 92, 0.6);
+}
+.decorCircle:last-child {
+  background: rgba(78, 62, 62, 0.5);
+}
+
+.glassPanel {
+  position: relative;
+  padding: 40px;
+  border-radius: 32px;
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow:
+    0 20px 40px -10px rgba(0, 0, 0, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.15);
+  background-image: url(/src/images/images.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 40px) 50%;
+}
+
+/* --- Анимация плавного движения (Float) --- */
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, -15px); /* Смещение вправо-вверх */
+  }
+  100% {
+    transform: translate(-10px, 10px); /* Смещение влево-вниз */
+  }
+}
+
+.moving {
+  animation: float 2s ease-in-out infinite alternate;
+}

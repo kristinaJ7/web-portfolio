@@ -1,0 +1,146 @@
+.projects-grid {
+  margin: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+  gap: 20px;
+}
+.project-card {
+  display: flex;
+  border: 2px solid #ffffff;
+  border-radius: 70px;
+  background-color: #3e3939;
+  /*position: sticky;*/
+  top: 0px;
+  overflow: hidden;
+  border-bottom: 1px solid #333;
+  box-shadow:
+    1px 1px 19px 8px rgb(105 105 105),
+    2px 8px 11px 3px rgba(255, 255, 255, 0.1);
+  padding: 10px;
+}
+.card-image {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.card-content {
+  display: grid;
+}
+.card-title {
+  font-size: 46px;
+}
+/* Лайтбокс: затемнение фона */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(45, 44, 44, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(4px);
+}
+/* Контейнер картинки внутри лайтбокса */
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 85vh;
+  padding: 10px;
+}
+/* Сама картинка — масштабируется, но не вылезает за экран */
+.lightbox-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+/* Кнопка закрытия */
+.lightbox-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+.lightbox-close:hover {
+  opacity: 0.8;
+}
+.project-number {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  grid-row: 1;
+  grid-column: 2;
+}
+.card-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  grid-column: 1;
+}
+.project-number-bottom-right {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-left: auto;
+  grid-row: 1;
+  grid-column: 2;
+}
+.btn {
+  border-radius: 50px;
+  color: #807874;
+  padding: 16px 24px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+.btn:hover {
+  color: #ffffff;
+  font-size: 18px;
+  background-color: #7f7d7d;
+}
+
+@media (max-width: 1420px) {
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-content {
+    padding: 40px;
+    justify-items: center;
+  }
+}
