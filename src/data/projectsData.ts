@@ -21,10 +21,10 @@ import furniture4 from '../images/images-project/furniture-project4.png';
 
 
 
-import Koreanstyle1 from '../images/images-project/furniture-project1.png';
-import Koreanstyle2 from '../images/images-project/furniture-project2.png';
-import  Koreanstyle3 from '../images/images-project/furniture-project3.png';
-import Koreanstyle4 from '../images/images-project/furniture-project4.png';
+import Koreanstyle1 from '../images/images-project/Korean-fashion-style1.png';
+import Koreanstyle2 from '../images/images-project/Korean-fashion-style2.png';
+import  Koreanstyle3 from '../images/images-project/Korean-fashion-style3.png';
+import Koreanstyle4 from '../images/images-project/Korean-fashion-style4.png';
 
 
 
