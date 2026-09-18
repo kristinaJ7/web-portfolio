@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import styles from './app-header.module.css';
 import type { TAppHeaderUIProps } from './type';
 
-export const AppHeaderUI: React.FC<TAppHeaderUIProps> = ({ userName }) => {
+export const AppHeaderUI: React.FC<TAppHeaderUIProps> = () => {
   return (
     <header className={styles.header}>
       <nav className={styles.menu}>
